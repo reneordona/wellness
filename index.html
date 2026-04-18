@@ -142,7 +142,7 @@ html, body {
   font-size:64px; font-weight:400; line-height:1.1;
   color:#fff; margin-bottom:32px; max-width:880px;
 }
-.tip-headline em { font-style:italic; color:var(--cyan); transition:color 0.6s; }
+.tip-headline em { font-style:italic; transition:color 0.6s; }
 .h-rule {
   width:48px; height:3px; border-radius:3px;
   background:var(--cyan); margin-bottom:28px; transition:background 0.6s;
@@ -365,6 +365,7 @@ function applyTheme(themeName) {
   document.getElementById('cardIcon').style.color = c;
   document.getElementById('iconCard').style.cssText += '; --card-glow:' + a.glow;
   document.querySelectorAll('.stat-chip-val').forEach(el => el.style.color = c);
+  document.querySelectorAll('#tipHeadline em').forEach(el => el.style.color = c);
 }
 
 function startBar() {
